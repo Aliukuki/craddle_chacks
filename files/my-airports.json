@@ -1,0 +1,262 @@
+{
+  "type": "AirportsCollection",
+  "airports": [
+    {
+      "text": "LOS",
+      "size": 1,
+      "city": "Lagos",
+      "lat": "6.577369",
+      "lng": "3.321156",
+      "is_source": true
+    },
+    {
+      "text": "ABV",
+      "size": 1,
+      "city": "Abuja",
+      "lat": "9.006792",
+      "lng": "7.263172",
+      "is_source": true
+    },
+    {
+      "text": "KAN",
+      "size": 1,
+      "city": "Kano",
+      "lat": "12.047589",
+      "lng": "8.524622",
+      "is_source": true
+    },
+    {
+      "text": "KAD",
+      "size": 1,
+      "city": "Kaduna",
+      "lat": "10.696025",
+      "lng": "7.320114",
+      "is_source": true
+    },
+    {
+      "text": "ATL",
+      "size": 1,
+      "country": "United States",
+      "city": "Atlanta",
+      "lat": "33.636719",
+      "lng": "-84.428067",
+      "is_source": false
+    },
+    {
+      "text": "LHR",
+      "size": 1,
+      "country": "United Kingdom",
+      "city": "London",
+      "lat": "51.4775",
+      "lng": "-0.461389",
+      "is_source": false
+    },
+    {
+      "text": "DXB",
+      "size": 1,
+      "country": "United Arab Emirates",
+      "city": "Dubai",
+      "lat": "25.252778",
+      "lng": "55.364444",
+      "is_source": false
+    },
+    {
+      "text": "LGW",
+      "size": 1,
+      "country": "United Kingdom",
+      "city": "London",
+      "lat": "51.148056",
+      "lng": "-0.190278",
+      "is_source": false
+    },
+    {
+      "text": "NRT",
+      "size": 1,
+      "country": "Japan",
+      "city": "Tokyo",
+      "lat": "35.764722",
+      "lng": "140.386389",
+      "is_source": false
+    },
+    {
+      "text": "PMI",
+      "size": 1,
+      "country": "Spain",
+      "city": "Palma de Mallorca",
+      "lat": "39.55361",
+      "lng": "2.727778",
+      "is_source": false
+    },
+    {
+      "text": "TPE",
+      "size": 1,
+      "country": "Taiwan",
+      "city": "Taipei",
+      "lat": "25.077731",
+      "lng": "121.232822",
+      "is_source": false
+    },
+    {
+      "text": "KUL",
+      "size": 1,
+      "country": "Malaysia",
+      "city": "Kuala Lumpur",
+      "lat": "2.745578",
+      "lng": "101.709917",
+      "is_source": false
+    },
+    {
+      "text": "ZRH",
+      "size": 1,
+      "country": "Switzerland",
+      "city": "Zurich",
+      "lat": "47.464722",
+      "lng": "8.549167",
+      "is_source": false
+    },
+    {
+      "text": "MEX",
+      "size": 1,
+      "country": "Mexico",
+      "city": "Mexico City",
+      "lat": "19.436303",
+      "lng": "-99.072097",
+      "is_source": false
+    },
+    {
+      "text": "TXL",
+      "size": 1,
+      "country": "Germany",
+      "city": "Berlin",
+      "lat": "52.559686",
+      "lng": "13.287711",
+      "is_source": false
+    },
+    {
+      "text": "DUB",
+      "size": 1,
+      "country": "Ireland",
+      "city": "Dublin",
+      "lat": "53.421333",
+      "lng": "-6.270075",
+      "is_source": false
+    },
+    {
+      "text": "GRU",
+      "size": 1,
+      "country": "Brazil",
+      "city": "Sao Paulo",
+      "lat": "-23.432075",
+      "lng": "-46.469511",
+      "is_source": false
+    },
+    {
+      "text": "STN",
+      "size": 1,
+      "country": "United Kingdom",
+      "city": "London",
+      "lat": "51.885",
+      "lng": "0.235",
+      "is_source": false
+    },
+    {
+      "text": "JNB",
+      "size": 1,
+      "country": "South Africa",
+      "city": "Johannesburg",
+      "lat": "-26.139166",
+      "lng": "28.246",
+      "is_source": false
+    },
+    {
+      "text": "HND",
+      "size": 1,
+      "country": "Japan",
+      "city": "Tokyo",
+      "lat": "35.552258",
+      "lng": "139.779694",
+      "is_source": false
+    },
+    {
+      "text": "LTN",
+      "size": 1,
+      "country": "United Kingdom",
+      "city": "London",
+      "lat": "51.874722",
+      "lng": "-0.368333",
+      "is_source": false
+    },
+    {
+      "text": "SXF",
+      "size": 1,
+      "country": "Germany",
+      "city": "Berlin",
+      "lat": "52.380001",
+      "lng": "13.5225",
+      "is_source": false
+    },
+    {
+      "text": "LCY",
+      "size": 1,
+      "country": "United Kingdom",
+      "city": "London",
+      "lat": "51.505278",
+      "lng": "0.055278",
+      "is_source": false
+    },
+    {
+      "text": "CGH",
+      "size": 1,
+      "country": "Brazil",
+      "city": "Sao Paulo",
+      "lat": "-23.626692",
+      "lng": "-46.655375",
+      "is_source": false
+    },
+    {
+      "text": "DWC",
+      "size": 1,
+      "country": "United Arab Emirates",
+      "city": "Dubai",
+      "lat": "24.55056",
+      "lng": "55.103174",
+      "is_source": false
+    },
+    {
+      "text": "TSA",
+      "size": 1,
+      "country": "Taiwan",
+      "city": "Taipei",
+      "lat": "25.069722",
+      "lng": "121.5525",
+      "is_source": false
+    },
+    {
+      "text": "SZB",
+      "size": 1,
+      "country": "Malaysia",
+      "city": "Kuala Lumpur",
+      "lat": "3.130583",
+      "lng": "101.549333",
+      "is_source": false
+    },
+    {
+      "text": "YXU",
+      "size": 1,
+      "country": "Canada",
+      "city": "London",
+      "lat": "43.033056",
+      "lng": "-81.151111",
+      "is_source": false
+    },
+    {
+      "text": "HLA",
+      "size": 1,
+      "country": "South Africa",
+      "city": "Johannesburg",
+      "lat": "-25.938514",
+      "lng": "27.926133",
+      "is_source": false
+    }
+  ]
+}
