@@ -13,9 +13,9 @@ import {
   SphereGeometry,
 } from "three";
 import { OrbitControls } from "orbital";
-import countries from "./files/globe-data-min.json" assert { type: "json" };
-import travelHistory from "./files/my-flights.json" assert { type: "json" };
-import airportHistory from "./files/my-airports.json" assert { type: "json" };
+import countries from "./files/globe-data-min.json";
+import travelHistory from "./files/my-flights.json";
+import airportHistory from "./files/my-airports.json";
 
 var renderer, camera, scene, controls;
 let mouseX = 0;
