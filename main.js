@@ -71,7 +71,7 @@ function init() {
   scene.add(camera);
 
   // Additional effects
-  scene.fog = new Fog("purple", 400, 2000);
+  scene.fog = new Fog("#00A651", 400, 2000);
 
   // Helpers
   // const axesHelper = new AxesHelper(800);
@@ -107,8 +107,8 @@ function initGlobe() {
     animateIn: true,
   })
     .hexPolygonsData(countries.features)
-    .hexPolygonResolution(5)
-    .hexPolygonMargin(0.8)
+    .hexPolygonResolution(3)
+    .hexPolygonMargin(0.5)
     .showAtmosphere(true)
     .atmosphereColor("#f2f2f2")
     .atmosphereAltitude(0.03)
