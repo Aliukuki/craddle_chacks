@@ -108,9 +108,9 @@ function initGlobe() {
   })
     .hexPolygonsData(countries.features)
     .hexPolygonResolution(3)
-    .hexPolygonMargin(0.7)
+    .hexPolygonMargin(0.5)
     .showAtmosphere(true)
-    .atmosphereColor("lightgreen")
+    .atmosphereColor("blue")
     .atmosphereAltitude(0.03)
     .hexPolygonColor((e) => {
       if (
@@ -158,8 +158,8 @@ function initGlobe() {
   const globeMaterial = Globe.globeMaterial();
   globeMaterial.color = new Color("#fff");
   globeMaterial.emissive = new Color("#00A651");
-  globeMaterial.emissiveIntensity = 0.1;
-  globeMaterial.shininess = 0.5;
+  globeMaterial.emissiveIntensity = 0.5;
+  globeMaterial.shininess = 0.3;
 
   // NOTE Cool stuff
   // globeMaterial.wireframe = true;
