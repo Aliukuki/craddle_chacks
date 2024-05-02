@@ -110,7 +110,7 @@ function initGlobe() {
     .hexPolygonResolution(3)
     .hexPolygonMargin(0.5)
     .showAtmosphere(true)
-    .atmosphereColor("fff")
+    .atmosphereColor("#fff")
     .atmosphereAltitude(0.03)
     .hexPolygonColor((e) => {
       if (
@@ -157,7 +157,7 @@ function initGlobe() {
   // Globe.rotateZ(-Math.PI / 6);
   const globeMaterial = Globe.globeMaterial();
   globeMaterial.color = new Color("#fff");
-  globeMaterial.emissive = new Color("#00A651");
+  globeMaterial.emissive = new Color("red");
   globeMaterial.emissiveIntensity = 0.5;
   globeMaterial.shininess = 0.3;
 
