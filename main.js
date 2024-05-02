@@ -147,7 +147,7 @@ function initGlobe() {
       .arcsTransitionDuration(2000)
       .arcDashInitialGap((e) => e.order * 1)
       .pointsData(airportHistory.airports)
-      .pointColor(() => "#219ebc")
+      .pointColor(() => "#000")
       .pointsMerge(true)
       .pointAltitude(0.02)
       .pointRadius(0.1);
