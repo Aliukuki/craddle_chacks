@@ -110,7 +110,7 @@ function initGlobe() {
     .hexPolygonResolution(3)
     .hexPolygonMargin(0.7)
     .showAtmosphere(true)
-    .atmosphereColor("#004251")
+    .atmosphereColor("red")
     .atmosphereAltitude(0.25)
     .hexPolygonColor((e) => {
       if (
