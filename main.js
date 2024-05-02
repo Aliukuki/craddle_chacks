@@ -159,7 +159,7 @@ function initGlobe() {
   globeMaterial.color = new Color("#fff");
   globeMaterial.emissive = new Color("fff");
   globeMaterial.emissiveIntensity = 0.5;
-  globeMaterial.shininess = 0.2;
+  globeMaterial.shininess = 0.3;
 
   // NOTE Cool stuff
   // globeMaterial.wireframe = true;
