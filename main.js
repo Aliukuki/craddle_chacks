@@ -71,7 +71,7 @@ function init() {
   scene.add(camera);
 
   // Additional effects
-  scene.fog = new Fog("#00A651", 400, 2000);
+  scene.fog = new Fog("purple", 400, 2000);
 
   // Helpers
   // const axesHelper = new AxesHelper(800);
@@ -107,10 +107,10 @@ function initGlobe() {
     animateIn: true,
   })
     .hexPolygonsData(countries.features)
-    .hexPolygonResolution(3)
-    .hexPolygonMargin(0.5)
+    .hexPolygonResolution(5)
+    .hexPolygonMargin(0.8)
     .showAtmosphere(true)
-    .atmosphereColor("#fff")
+    .atmosphereColor("#f2f2f2")
     .atmosphereAltitude(0.03)
     .hexPolygonColor((e) => {
       if (
@@ -141,15 +141,15 @@ function initGlobe() {
       .arcStroke((e) => {
         return e.status ? 0.5 : 0.3;
       })
-      .arcDashLength(0.4)
-      .arcDashGap(2)
-      .arcDashAnimateTime(1400)
-      .arcsTransitionDuration(1000)
+      .arcDashLength(0.8)
+      .arcDashGap(5)
+      .arcDashAnimateTime(5400)
+      .arcsTransitionDuration(4000)
       .arcDashInitialGap((e) => e.order * 1)
       .pointsData(airportHistory.airports)
       .pointColor(() => "#000")
       .pointsMerge(true)
-      .pointAltitude(0.1)
+      .pointAltitude(0)
       .pointRadius(10);
   }, 1000);
 
