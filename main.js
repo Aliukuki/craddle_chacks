@@ -141,15 +141,15 @@ function initGlobe() {
       .arcStroke((e) => {
         return e.status ? 0.5 : 0.3;
       })
-      .arcDashLength(0.9)
-      .arcDashGap(4)
+      .arcDashLength(0.4)
+      .arcDashGap(2)
       .arcDashAnimateTime(1400)
-      .arcsTransitionDuration(2000)
+      .arcsTransitionDuration(1000)
       .arcDashInitialGap((e) => e.order * 1)
       .pointsData(airportHistory.airports)
       .pointColor(() => "#000")
       .pointsMerge(true)
-      .pointAltitude(0.02)
+      .pointAltitude(0.05)
       .pointRadius(0.1);
   }, 1000);
 
@@ -157,9 +157,9 @@ function initGlobe() {
   // Globe.rotateZ(-Math.PI / 6);
   const globeMaterial = Globe.globeMaterial();
   globeMaterial.color = new Color("#fff");
-  globeMaterial.emissive = new Color("red");
-  globeMaterial.emissiveIntensity = 0.5;
-  globeMaterial.shininess = 0.3;
+  globeMaterial.emissive = new Color("fff");
+  globeMaterial.emissiveIntensity = 0.3;
+  globeMaterial.shininess = 0.6;
 
   // NOTE Cool stuff
   // globeMaterial.wireframe = true;
