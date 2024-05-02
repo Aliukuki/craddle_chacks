@@ -121,7 +121,7 @@ function initGlobe() {
         return "#00A651";
       } else return "#00A651";
     });
-  const arr = ["#8ecae6", "#219ebc"];
+  const arr = ["pink", "yellow"];
   // NOTE Arc animations are followed after the globe enters the scene
   setTimeout(() => {
     Globe.arcsData(
@@ -149,8 +149,8 @@ function initGlobe() {
       .pointsData(airportHistory.airports)
       .pointColor(() => "#000")
       .pointsMerge(true)
-      .pointAltitude(0.05)
-      .pointRadius(0.1);
+      .pointAltitude(0.01)
+      .pointRadius(10);
   }, 1000);
 
   // Globe.rotateY(-Math.PI * (5 / 9));
