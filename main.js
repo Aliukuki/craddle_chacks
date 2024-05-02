@@ -111,7 +111,7 @@ function initGlobe() {
     .hexPolygonMargin(0.7)
     .showAtmosphere(true)
     .atmosphereColor("red")
-    .atmosphereAltitude(0.25)
+    .atmosphereAltitude(0.75)
     .hexPolygonColor((e) => {
       if (
         ["LOS", "ABV", "THA", "RUS", "UZB", "IDN", "KAZ", "MYS"].includes(
