@@ -40,7 +40,7 @@ function init() {
 
   // Initialize scene, light
   scene = new Scene();
-  scene.add(new AmbientLight("#fff", 0.6));
+  scene.add(new AmbientLight("#fff", 0.1));
   scene.background = new Color("#fff");
 
   // Initialize camera, light
@@ -48,19 +48,19 @@ function init() {
   camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();
 
-  var dLight = new DirectionalLight("#ffffff", 0.4);
+  var dLight = new DirectionalLight("#ffffff", 0.1);
   dLight.position.set(-800, 2000, 400);
   // camera.add(dLight);
 
-  var dLight1 = new DirectionalLight("#faf3dd", 1);
+  var dLight1 = new DirectionalLight("#faf3dd", 0.1);
   dLight1.position.set(-200, 500, 200);
   // camera.add(dLight1);
 
-  var dLight2 = new PointLight("#faf3dd", 0.7);
+  var dLight2 = new PointLight("#faf3dd", 0.1);
   dLight2.position.set(-200, 100, 100);
   camera.add(dLight2);
 
-  var dLight3 = new DirectionalLight("#ffffff", 0.6);
+  var dLight3 = new DirectionalLight("#ffffff", 0.1);
   dLight3.position.set(-0, 2000, 0);
   camera.add(dLight3);
 
