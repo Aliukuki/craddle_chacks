@@ -40,27 +40,27 @@ function init() {
 
   // Initialize scene, light
   scene = new Scene();
-  scene.add(new AmbientLight("#fff", 0.1));
-  scene.background = new Color("#fff");
+  scene.add(new AmbientLight("#ffffff", 0.6));
+  scene.background = new Color("#ffffff");
 
   // Initialize camera, light
   camera = new PerspectiveCamera();
   camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();
 
-  var dLight = new DirectionalLight("#ffffff", 0.1);
+  var dLight = new DirectionalLight("#ffffff", 0.4);
   dLight.position.set(-800, 2000, 400);
   // camera.add(dLight);
 
-  var dLight1 = new DirectionalLight("#faf3dd", 0.1);
+  var dLight1 = new DirectionalLight("#faf3dd", 1);
   dLight1.position.set(-200, 500, 200);
   // camera.add(dLight1);
 
-  var dLight2 = new PointLight("#faf3dd", 0.1);
+  var dLight2 = new PointLight("#faf3dd", 0.7);
   dLight2.position.set(-200, 100, 100);
   camera.add(dLight2);
 
-  var dLight3 = new DirectionalLight("#ffffff", 0.1);
+  var dLight3 = new DirectionalLight("#ffffff", 0.6);
   dLight3.position.set(-0, 2000, 0);
   camera.add(dLight3);
 
@@ -71,7 +71,7 @@ function init() {
   scene.add(camera);
 
   // Additional effects
-  scene.fog = new Fog("red", 400, 2000);
+  scene.fog = new Fog("#fff", 400, 2000);
 
   // Helpers
   // const axesHelper = new AxesHelper(800);
@@ -118,8 +118,8 @@ function initGlobe() {
           e.properties.ISO_A3
         )
       ) {
-        return "#00A651";
-      } else return "#66FF99";
+        return "#ffffff";
+      } else return "#ffffff";
     });
   const arr = ["darkgreen", "#000"];
   // NOTE Arc animations are followed after the globe enters the scene
