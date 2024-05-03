@@ -110,7 +110,7 @@ function initGlobe() {
     .hexPolygonResolution(3)
     .hexPolygonMargin(0.5)
     .showAtmosphere(true)
-    .atmosphereColor("#f2f2f2")
+    .atmosphereColor("#66FF99")
     .atmosphereAltitude(0.03)
     .hexPolygonColor((e) => {
       if (
@@ -119,9 +119,9 @@ function initGlobe() {
         )
       ) {
         return "#00A651";
-      } else return "#00A651";
+      } else return "#66FF99";
     });
-  const arr = ["pink", "yellow"];
+  const arr = ["00A651", "66FF99"];
   // NOTE Arc animations are followed after the globe enters the scene
   setTimeout(() => {
     Globe.arcsData(
@@ -147,7 +147,7 @@ function initGlobe() {
       .arcsTransitionDuration(4000)
       .arcDashInitialGap((e) => e.order * 1)
       .pointsData(airportHistory.airports)
-      .pointColor(() => "#000")
+      .pointColor(() => "#00A651")
       .pointsMerge(true)
       .pointAltitude(0)
       .pointRadius(10);
@@ -156,10 +156,12 @@ function initGlobe() {
   // Globe.rotateY(-Math.PI * (5 / 9));
   // Globe.rotateZ(-Math.PI / 6);
   const globeMaterial = Globe.globeMaterial();
-  globeMaterial.color = new Color("#f2f2f2");
-  globeMaterial.emissive = new Color("#f2f2f2");
-  globeMaterial.emissiveIntensity = 0.5;
-  globeMaterial.shininess = 0.3;
+  globeMaterial.color = new Color("#E6FFE6");
+  globeMaterial.emissive = new Color("#E6FFE6");
+  globeMaterial.emissiveIntensity = 0.1;
+  globeMaterial.shininess = 0.1;
+  globeMaterial.transparent = true;
+globeMaterial.opacity = 0.8; // Adjust the opacity value as needed for a faded look
 
   // NOTE Cool stuff
   // globeMaterial.wireframe = true;
