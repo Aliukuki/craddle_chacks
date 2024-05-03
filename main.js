@@ -71,7 +71,7 @@ function init() {
   scene.add(camera);
 
   // Additional effects
-  scene.fog = new Fog("#fff", 400, 2000);
+  scene.fog = new Fog("red", 400, 2000);
 
   // Helpers
   // const axesHelper = new AxesHelper(800);
