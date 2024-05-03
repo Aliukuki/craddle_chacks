@@ -118,10 +118,10 @@ function initGlobe() {
           e.properties.ISO_A3
         )
       ) {
-        return "#00A651";
-      } else return "#66FF99";
+        return "blue";
+      } else return "blue";
     });
-  const arr = ["darkgreen", "#000"];
+  const arr = ["red", "red"];
   // NOTE Arc animations are followed after the globe enters the scene
   setTimeout(() => {
     Globe.arcsData(
@@ -157,7 +157,7 @@ function initGlobe() {
   // Globe.rotateZ(-Math.PI / 6);
   const globeMaterial = Globe.globeMaterial();
   globeMaterial.color = new Color("#E6FFE6");
-  globeMaterial.emissive = new Color("E6FFE6");
+  globeMaterial.emissive = new Color("#fff");
   globeMaterial.emissiveIntensity = 0.1;
   globeMaterial.shininess = 0.1;
   globeMaterial.envMap = null; // Disable the environment map
