@@ -149,8 +149,8 @@ function initGlobe() {
       .pointsData(airportHistory.airports)
       .pointColor(() => "#00A651")
       .pointsMerge(true)
-      .pointAltitude(0)
-      .pointRadius(10);
+      .pointAltitude(5)
+      .pointRadius(0);
   }, 1000);
 
   // Globe.rotateY(-Math.PI * (5 / 9));
