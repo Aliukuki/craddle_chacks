@@ -40,8 +40,8 @@ function init() {
 
   // Initialize scene, light
   scene = new Scene();
-  scene.add(new AmbientLight("#ffffff", 0.6));
-  scene.background = new Color("#ffffff");
+  scene.add(new AmbientLight("#fff", 0.6));
+  scene.background = new Color("#fff");
 
   // Initialize camera, light
   camera = new PerspectiveCamera();
@@ -118,8 +118,8 @@ function initGlobe() {
           e.properties.ISO_A3
         )
       ) {
-        return "#ffffff";
-      } else return "#ffffff";
+        return "#00A651";
+      } else return "#66FF99";
     });
   const arr = ["darkgreen", "#000"];
   // NOTE Arc animations are followed after the globe enters the scene
