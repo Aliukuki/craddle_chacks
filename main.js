@@ -153,6 +153,33 @@ function initGlobe() {
       .pointRadius(0);
   }, 1000);
 
+// Create a green material for the shadow plane
+const shadowMaterial = new MeshStandardMaterial({
+  color: new Color("#4daf4a"),
+  transparent: true,
+  opacity: 0.2,
+  depthWrite: false
+});
+
+// Create a plane mesh to represent the shadow
+const shadowGeometry = new PlaneGeometry(Globe.width * 2, Globe.height * 2);
+const shadow = new Mesh(shadowGeometry, shadowMaterial);
+shadow.rotation.x = Math.PI / 2;
+shadow.position.y = Globe.position.y - Globe.height * 0.1;
+
+// Add the shadow plane to the scene
+scene.add(shadow);
+
+// Create a spotlight to cast light on the globe and shadow
+const light = new SpotLight(0xffffff, 1);
+light.position.set(0, 500, 0);
+light.angle = Math.PI / 6;
+light.penumbra = 0.5;
+light.castShadow = true;
+
+// Add the spotlight to the scene
+scene.add(light);
+
   // Globe.rotateY(-Math.PI * (5 / 9));
   // Globe.rotateZ(-Math.PI / 6);
   const globeMaterial = Globe.globeMaterial();
