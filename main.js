@@ -40,7 +40,7 @@ function init() {
 
   // Initialize scene, light
   scene = new Scene();
-  scene.add(new AmbientLight("#cae9ff", 0.6));
+  scene.add(new AmbientLight("#fff", 0.6));
   scene.background = new Color("#fff");
 
   // Initialize camera, light
@@ -71,7 +71,7 @@ function init() {
   scene.add(camera);
 
   // Additional effects
-  scene.fog = new Fog("#00A651", 400, 2000);
+  scene.fog = new Fog("#fff", 400, 2000);
 
   // Helpers
   // const axesHelper = new AxesHelper(800);
