@@ -118,20 +118,16 @@ function initGlobe() {
         return "#46E96A";
       } else return "#46E96A";
     });
-  const arr = ["red", "red"];
-  // NOTE Arc animations are followed after the globe enters the scene
+
+  // Initialize arcs and points with random colors
   setTimeout(() => {
     Globe.arcsData(
       travelHistory.flights.map((a) => ({
         ...a,
-        color: arr[Math.round(Math.random() * 3) % 3],
+        color: '#' + Math.floor(Math.random()*16777215).toString(16), // Random color for each arc
       }))
     )
-      .arcColor((e, i) => {
-        let c = arr[Math.round(Math.random() * 3) % 2];
-        console.log({ c });
-        return c;
-      })
+      .arcColor(() => '#' + Math.floor(Math.random()*16777215).toString(16)) // Random color for each arc
       .arcAltitude((e) => {
         return e.arcAlt;
       })
@@ -144,14 +140,12 @@ function initGlobe() {
       .arcsTransitionDuration(4000)
       .arcDashInitialGap((e) => e.order * 1)
       .pointsData(airportHistory.airports)
-      .pointColor(() => "darkgreen")
+      .pointColor(() => '#' + Math.floor(Math.random()*16777215).toString(16)) // Random color for each point
       .pointsMerge(true)
       .pointAltitude(5)
       .pointRadius(0);
   }, 1000);
 
-  // Globe.rotateY(-Math.PI * (5 / 9));
-  // Globe.rotateZ(-Math.PI / 6);
   const globeMaterial = Globe.globeMaterial();
   globeMaterial.color = new Color("#fff");
   globeMaterial.emissive = new Color("#fff");
