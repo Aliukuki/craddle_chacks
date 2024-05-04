@@ -116,6 +116,22 @@ scene.add(light);
   document.addEventListener("mousemove", onMouseMove);
 }
 
+// Create a line geometry
+const lineGeometry = new THREE.Geometry();
+lineGeometry.vertices.push(
+    new THREE.Vector3(0, 0, 0),  // Start point
+    new THREE.Vector3(1, 1, 1)   // End point
+);
+
+// Create a line material
+const lineMaterial = new THREE.LineBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0.1 });
+
+// Create the line mesh
+const line = new THREE.Line(lineGeometry, lineMaterial);
+
+// Add the line to the scene
+scene.add(line);
+
 // SECTION Globe
 function initGlobe() {
   // Initialize the Globe
