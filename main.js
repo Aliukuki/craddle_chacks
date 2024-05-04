@@ -73,6 +73,30 @@ function init() {
   // Additional effects
   scene.fog = new Fog("#0xd9d9d9", 400, 2000);
 
+  // Add after globe initialization
+const light = new DirectionalLight(0xffffff, 0.75);
+light.position.set(0, 500, 0);
+light.target.position.set(0, 0, 0);
+light.castShadow = true;
+
+light.shadow.mapSize.width = 1024;
+light.shadow.mapSize.height = 1024;
+light.shadow.camera.near = 0.5;
+light.shadow.camera.far = 500;
+light.shadow.bias = -0.002;
+light.shadow.radius = 10;
+
+scene.add(light);
+
+
+const globe = new Globe({
+  // ... other globe options
+mesh: {
+    castShadow: true, // Enable shadow casting on the globe mesh
+},
+});
+
+
   // Helpers
   // const axesHelper = new AxesHelper(800);
   // scene.add(axesHelper);
