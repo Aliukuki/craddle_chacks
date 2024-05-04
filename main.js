@@ -70,9 +70,6 @@ function init() {
 
   scene.add(camera);
 
-  // Additional effects
-  scene.fog = new Fog("#0xd9d9d9", 400, 2000);
-
   // Initialize controls
   controls = new OrbitControls(camera, renderer.domElement);
   controls.enableDamping = true;
@@ -151,7 +148,7 @@ function initGlobe() {
   const globeMaterial = Globe.globeMaterial();
   globeMaterial.color = new Color("#fff");
   globeMaterial.emissive = new Color("#fff");
-  globeMaterial.emissiveIntensity = 0.7;
+  globeMaterial.emissiveIntensity = 0.5;
   globeMaterial.shininess = 0.5;
   globeMaterial.envMap = null; // Disable the environment map
   globeMaterial.transparent = true;
