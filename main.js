@@ -48,19 +48,19 @@ function init() {
   camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();
 
-  var dLight = new DirectionalLight("#faf3dd", 0.6);
+  var dLight = new DirectionalLight("#fff", 0.6);
   dLight.position.set(-800, 2000, 400);
   // camera.add(dLight);
 
-  var dLight1 = new DirectionalLight("#faf3dd", 0.6);
+  var dLight1 = new DirectionalLight("#fff", 0.6);
   dLight1.position.set(-200, 500, 200);
   // camera.add(dLight1);
 
-  var dLight2 = new PointLight("#faf3dd", 0.6);
+  var dLight2 = new PointLight("#fff", 0.6);
   dLight2.position.set(-200, 100, 100);
   camera.add(dLight2);
 
-  var dLight3 = new DirectionalLight("#faf3dd", 0.6);
+  var dLight3 = new DirectionalLight("#fff", 0.6);
   dLight3.position.set(-0, 2000, 0);
   camera.add(dLight3);
 
@@ -111,8 +111,8 @@ function initGlobe() {
           e.properties.ISO_A3
         )
       ) {
-        return "#f6f6f6";
-      } else return "#f6f6f6";
+        return "#E0E0E0";
+      } else return "#E0E0E0";
     });
   const arr = ["red", "red"];
   // NOTE Arc animations are followed after the globe enters the scene
