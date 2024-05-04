@@ -176,13 +176,6 @@ function onMouseMove(event) {
   // console.log("x: " + mouseX + " y: " + mouseY);
 }
 
-function onWindowResize() {
-  camera.aspect = window.innerWidth / window.innerHeight;
-  camera.updateProjectionMatrix();
-  windowHalfX = window.innerWidth / 1.5;
-  windowHalfY = window.innerHeight / 1.5;
-  renderer.setSize(window.innerWidth, window.innerHeight);
-}
 
 function animate() {
   camera.position.x +=
