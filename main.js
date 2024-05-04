@@ -87,8 +87,8 @@ function init() {
   controls.dynamicDampingFactor = 0.01;
   controls.enablePan = false;
   controls.enableZoom = false; // Disable zoom functionality
-  controls.minDistance = 200;
-  controls.maxDistance = 200;
+  controls.minDistance = 500;
+  controls.maxDistance = 500;
   controls.rotateSpeed = 0.8;
   controls.zoomSpeed = 1;
   controls.autoRotate = false;
