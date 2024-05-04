@@ -148,8 +148,8 @@ function initGlobe() {
   const globeMaterial = Globe.globeMaterial();
   globeMaterial.color = new Color("#fff");
   globeMaterial.emissive = new Color("#fff");
-  globeMaterial.emissiveIntensity = 0.5;
-  globeMaterial.shininess = 0.5;
+  globeMaterial.emissiveIntensity = 0.2;
+  globeMaterial.shininess = 0.2;
   globeMaterial.envMap = null; // Disable the environment map
   globeMaterial.transparent = true;
 globeMaterial.opacity = 0.4; // Adjust the opacity value as needed for a faded look
