@@ -13,9 +13,9 @@ import {
   SphereGeometry,
 } from "three";
 import { OrbitControls } from "orbital";
-import {countries} from "./data/globe-data-min.js";
-import {travelHistory} from "./data/my-flights.js";
-import {airportHistory} from "./data/my-airports.js";
+import { countries } from "./data/globe-data-min.js";
+import { travelHistory } from "./data/my-flights.js";
+import { airportHistory } from "./data/my-airports.js";
 
 var renderer, camera, scene, controls;
 let mouseX = 0;
@@ -50,19 +50,23 @@ function init() {
 
   var dLight = new DirectionalLight("#0xd9d9d9", 0.75);
   dLight.position.set(-800, 2000, 400);
-  // camera.add(dLight);
+  dLight.castShadow = true; // Enable shadow casting
+  scene.add(dLight);
 
   var dLight1 = new DirectionalLight("#faf3dd", 1);
   dLight1.position.set(-200, 500, 200);
-  // camera.add(dLight1);
+  dLight1.castShadow = true; // Enable shadow casting
+  scene.add(dLight1);
 
   var dLight2 = new PointLight("#faf3dd", 0.75);
   dLight2.position.set(-200, 100, 100);
-  camera.add(dLight2);
+  dLight2.castShadow = true; // Enable shadow casting
+  scene.add(dLight2);
 
   var dLight3 = new DirectionalLight("#0xd9d9d9", 0.75);
   dLight3.position.set(-0, 2000, 0);
-  camera.add(dLight3);
+  dLight3.castShadow = true; // Enable shadow casting
+  scene.add(dLight3);
 
   camera.position.z = 400;
   camera.position.x = 0;
@@ -72,30 +76,6 @@ function init() {
 
   // Additional effects
   scene.fog = new Fog("#0xd9d9d9", 400, 2000);
-
-  // Add after globe initialization
-const light = new DirectionalLight(0xffffff, 0.75);
-light.position.set(0, 500, 0);
-light.target.position.set(0, 0, 0);
-light.castShadow = true;
-
-light.shadow.mapSize.width = 1024;
-light.shadow.mapSize.height = 1024;
-light.shadow.camera.near = 0.5;
-light.shadow.camera.far = 500;
-light.shadow.bias = -0.002;
-light.shadow.radius = 10;
-
-scene.add(light);
-
-
-  // Helpers
-  // const axesHelper = new AxesHelper(800);
-  // scene.add(axesHelper);
-  // var helper = new DirectionalLightHelper(dLight);
-  // scene.add(helper);
-  // var helperCamera = new CameraHelper(dLight.shadow.camera);
-  // scene.add(helperCamera);
 
   // Initialize controls
   controls = new OrbitControls(camera, renderer.domElement);
@@ -179,7 +159,7 @@ function initGlobe() {
   globeMaterial.shininess = 0.4;
   globeMaterial.envMap = null; // Disable the environment map
   globeMaterial.transparent = true;
-globeMaterial.opacity = 0.5; // Adjust the opacity value as needed for a faded look
+  globeMaterial.opacity = 0.5; // Adjust the opacity value as needed for a faded look
 
   // NOTE Cool stuff
   // globeMaterial.wireframe = true;
