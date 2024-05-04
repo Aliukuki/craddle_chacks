@@ -103,9 +103,9 @@ scene.add(light);
   controls.dynamicDampingFactor = 0.01;
   controls.enablePan = false;
   controls.enableZoom = false; // Disable zoom functionality
-  controls.minDistance = 400;
-  controls.maxDistance = 500;
-  controls.rotateSpeed = 0.9;
+  controls.minDistance = 300;
+  controls.maxDistance = 300;
+  controls.rotateSpeed = 0.7;
   controls.zoomSpeed = 1;
   controls.autoRotate = false;
 
