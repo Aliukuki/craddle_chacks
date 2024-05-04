@@ -134,15 +134,15 @@ function initGlobe() {
       .arcStroke((e) => {
         return e.status ? 0.5 : 0.3;
       })
-      .arcDashLength(0.8)
-      .arcDashGap(5)
+      .arcDashLength(0.9)
+      .arcDashGap(10)
       .arcDashAnimateTime(5400)
       .arcsTransitionDuration(4000)
       .arcDashInitialGap((e) => e.order * 1)
       .pointsData(airportHistory.airports)
       .pointColor(() => '#' + Math.floor(Math.random()*16777215).toString(16)) // Random color for each point
       .pointsMerge(true)
-      .pointAltitude(5)
+      .pointAltitude(9)
       .pointRadius(0);
   }, 1000);
 
