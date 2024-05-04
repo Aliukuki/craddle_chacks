@@ -159,7 +159,7 @@ function initGlobe() {
         return e.status ? 0.5 : 0.3;
       })
       .arcDashLength(0.8)
-      .arcDashGap(5)
+      .arcDashGap(20)
       .arcDashAnimateTime(5400)
       .arcsTransitionDuration(4000)
       .arcDashInitialGap((e) => e.order * 1)
