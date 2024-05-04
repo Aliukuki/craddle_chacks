@@ -13,9 +13,9 @@ import {
   SphereGeometry,
 } from "three";
 import { OrbitControls } from "orbital";
-import { countries } from "./data/globe-data-min.js";
-import { travelHistory } from "./data/my-flights.js";
-import { airportHistory } from "./data/my-airports.js";
+import {countries} from "./data/globe-data-min.js";
+import {travelHistory} from "./data/my-flights.js";
+import {airportHistory} from "./data/my-airports.js";
 
 var renderer, camera, scene, controls;
 let mouseX = 0;
@@ -56,7 +56,7 @@ function init() {
   dLight1.position.set(-200, 500, 200);
   // camera.add(dLight1);
 
-  var dLight2 = new PointLight("#faf3dd", 0.9);
+  var dLight2 = new PointLight("#faf3dd", 0.);
   dLight2.position.set(-200, 100, 100);
   camera.add(dLight2);
 
@@ -105,12 +105,15 @@ function initGlobe() {
     .showAtmosphere(true)
     .atmosphereColor("#fff")
     .atmosphereAltitude(0.05)
-    .hexPolygonColor("#888888"); // Set grey color for the globe
-
-  // Access the globe material and set its color to grey
-  const globeMaterial = Globe.globeMaterial();
-  globeMaterial.color = new Color("#888888");
-
+    .hexPolygonColor((e) => {
+      if (
+        ["LOS", "ABV", "THA", "RUS", "UZB", "IDN", "KAZ", "MYS"].includes(
+          e.properties.ISO_A3
+        )
+      ) {
+        return "#E8E8E8";
+      } else return "#E8E8E8";
+    });
   const arr = ["red", "red"];
   // NOTE Arc animations are followed after the globe enters the scene
   setTimeout(() => {
@@ -152,11 +155,10 @@ function initGlobe() {
   globeMaterial.shininess = 0.4;
   globeMaterial.envMap = null; // Disable the environment map
   globeMaterial.transparent = true;
-  globeMaterial.opacity = 0.9; // Adjust the opacity value as needed for a faded look
+globeMaterial.opacity = 0.9; // Adjust the opacity value as needed for a faded look
 
   // NOTE Cool stuff
   // globeMaterial.wireframe = true;
-
   scene.add(Globe);
 }
 
