@@ -161,11 +161,11 @@ function initGlobe() {
       .arcDashLength(0.8)
       .arcDashGap(20)
       .arcDashAnimateTime(5400)
-      .arcsTransitionDuration(4000)
+      .arcsTransitionDuration((e, i) => i * 500) // Adjust the duration for each arc
+      .arcDashInitialGap((e) => e.order * 1)
       .pointsData(airportHistory.airports)
       .pointColor(() => "darkgreen")
-      .arcsTransitionDuration((e, i) => i * 500) // Adjust the duration for each arc
-       .arcDashInitialGap((e) => e.order * 1)
+    
       .pointsMerge(true)
       .pointAltitude(80)
       .pointRadius(0);
