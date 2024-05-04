@@ -111,8 +111,8 @@ function initGlobe() {
           e.properties.ISO_A3
         )
       ) {
-        return "#CCCCCC";
-      } else return "#CCCCCC";
+        return "#E0E0E0";
+      } else return "#E0E0E0";
     });
   const arr = ["red", "red"];
   // NOTE Arc animations are followed after the globe enters the scene
