@@ -103,9 +103,9 @@ scene.add(light);
   controls.dynamicDampingFactor = 0.01;
   controls.enablePan = false;
   controls.enableZoom = false; // Disable zoom functionality
-  controls.minDistance = 500;
+  controls.minDistance = 400;
   controls.maxDistance = 500;
-  controls.rotateSpeed = 0.8;
+  controls.rotateSpeed = 0.9;
   controls.zoomSpeed = 1;
   controls.autoRotate = false;
 
@@ -179,7 +179,7 @@ function initGlobe() {
   globeMaterial.shininess = 0.4;
   globeMaterial.envMap = null; // Disable the environment map
   globeMaterial.transparent = true;
-globeMaterial.opacity = 0.8; // Adjust the opacity value as needed for a faded look
+globeMaterial.opacity = 0.9; // Adjust the opacity value as needed for a faded look
 
   // NOTE Cool stuff
   // globeMaterial.wireframe = true;
