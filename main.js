@@ -117,7 +117,6 @@ scene.add(light);
 }
 
 // SECTION Globe
-// SECTION Globe
 function initGlobe() {
   // Initialize the Globe
   Globe = new ThreeGlobe({
@@ -145,7 +144,7 @@ function initGlobe() {
   Globe.arcsData([singleArcData])
     .arcColor("red") // Set color of the arc
     .arcAltitude((e) => {
-      return e.arcAlt;
+      return 20; // Adjust altitude as needed
     })
     .arcStroke((e) => {
       return e.status ? 0.5 : 0.3;
@@ -153,7 +152,7 @@ function initGlobe() {
     .arcDashLength(0.8)
     .arcDashGap(20)
     .arcDashAnimateTime(5400)
-    .arcsTransitionDuration(4000)
+    .arcsTransitionDuration(0) // Set transition duration to 0 to prevent automatic repeat
     .arcDashInitialGap(0) // Set initial gap to 0 to start the animation from the beginning
     .pointsData(airportHistory.airports)
     .pointColor(() => "darkgreen")
@@ -161,6 +160,7 @@ function initGlobe() {
     .pointAltitude(80)
     .pointRadius(0);
 }
+
 
   // Globe.rotateY(-Math.PI * (5 / 9));
   // Globe.rotateZ(-Math.PI / 6);
