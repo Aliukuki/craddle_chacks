@@ -13,9 +13,9 @@ import {
   SphereGeometry,
 } from "three";
 import { OrbitControls } from "orbital";
-import {countries} from "./data/globe-data-min.js";
-import {travelHistory} from "./data/my-flights.js";
-import {airportHistory} from "./data/my-airports.js";
+import { countries } from "./data/globe-data-min.js";
+import { travelHistory } from "./data/my-flights.js";
+import { airportHistory } from "./data/my-airports.js";
 
 var renderer, camera, scene, controls;
 let mouseX = 0;
@@ -73,15 +73,6 @@ function init() {
   // Additional effects
   scene.fog = new Fog("#0xd9d9d9", 400, 2000);
 
-
-  // Helpers
-  // const axesHelper = new AxesHelper(800);
-  // scene.add(axesHelper);
-  // var helper = new DirectionalLightHelper(dLight);
-  // scene.add(helper);
-  // var helperCamera = new CameraHelper(dLight.shadow.camera);
-  // scene.add(helperCamera);
-
   // Initialize controls
   controls = new OrbitControls(camera, renderer.domElement);
   controls.enableDamping = true;
@@ -92,7 +83,7 @@ function init() {
   controls.maxDistance = 300;
   controls.rotateSpeed = 0.7;
   controls.zoomSpeed = 1;
-  controls.autoRotate = false;
+  controls.autoRotate = true;
 
   controls.minPolarAngle = Math.PI / 3.5;
   controls.maxPolarAngle = Math.PI - Math.PI / 3;
@@ -114,15 +105,12 @@ function initGlobe() {
     .showAtmosphere(true)
     .atmosphereColor("#fff")
     .atmosphereAltitude(0.05)
-    .hexPolygonColor((e) => {
-      if (
-        ["LOS", "ABV", "THA", "RUS", "UZB", "IDN", "KAZ", "MYS"].includes(
-          e.properties.ISO_A3
-        )
-      ) {
-        return "#46E96A";
-      } else return "#46E96A";
-    });
+    .hexPolygonColor("#888888"); // Set grey color for the globe
+
+  // Access the globe material and set its color to grey
+  const globeMaterial = Globe.globeMaterial();
+  globeMaterial.color = new Color("#888888");
+
   const arr = ["red", "red"];
   // NOTE Arc animations are followed after the globe enters the scene
   setTimeout(() => {
@@ -164,10 +152,11 @@ function initGlobe() {
   globeMaterial.shininess = 0.4;
   globeMaterial.envMap = null; // Disable the environment map
   globeMaterial.transparent = true;
-globeMaterial.opacity = 0.9; // Adjust the opacity value as needed for a faded look
+  globeMaterial.opacity = 0.9; // Adjust the opacity value as needed for a faded look
 
   // NOTE Cool stuff
   // globeMaterial.wireframe = true;
+
   scene.add(Globe);
 }
 
