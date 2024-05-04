@@ -166,7 +166,7 @@ function initGlobe() {
       .pointsData(airportHistory.airports)
       .pointColor(() => "darkgreen")
       .pointsMerge(true)
-      .pointAltitude(20)
+      .pointAltitude(80)
       .pointRadius(0);
   }, 1000);
 
