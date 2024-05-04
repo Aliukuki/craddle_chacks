@@ -50,22 +50,22 @@ function init() {
 
   var dLight = new DirectionalLight("#0xd9d9d9", 0.75);
   dLight.position.set(-800, 2000, 400);
-  dLight.castShadow = true;
+  dLight.castShadow = true; // Enable shadow casting
   scene.add(dLight);
 
   var dLight1 = new DirectionalLight("#faf3dd", 1);
   dLight1.position.set(-200, 500, 200);
-  dLight1.castShadow = true;
+  dLight1.castShadow = true; // Enable shadow casting
   scene.add(dLight1);
 
   var dLight2 = new PointLight("#faf3dd", 0.75);
   dLight2.position.set(-200, 100, 100);
-  dLight2.castShadow = true;
+  dLight2.castShadow = true; // Enable shadow casting
   scene.add(dLight2);
 
   var dLight3 = new DirectionalLight("#0xd9d9d9", 0.75);
   dLight3.position.set(-0, 2000, 0);
-  dLight3.castShadow = true;
+  dLight3.castShadow = true; // Enable shadow casting
   scene.add(dLight3);
 
   camera.position.z = 400;
@@ -94,10 +94,6 @@ function init() {
 
   //window.addEventListener("resize", onWindowResize, false);
   document.addEventListener("mousemove", onMouseMove);
-
-  // Enable shadow rendering
-  renderer.shadowMap.enabled = true;
-  renderer.shadowMap.type = THREE.PCFSoftShadowMap; // Optional: Soften the shadows for smoother appearance
 }
 
 // SECTION Globe
@@ -122,8 +118,8 @@ function initGlobe() {
         return "#46E96A";
       } else return "#46E96A";
     });
-
   const arr = ["red", "red"];
+  // NOTE Arc animations are followed after the globe enters the scene
   setTimeout(() => {
     Globe.arcsData(
       travelHistory.flights.map((a) => ({
@@ -154,6 +150,8 @@ function initGlobe() {
       .pointRadius(0);
   }, 1000);
 
+  // Globe.rotateY(-Math.PI * (5 / 9));
+  // Globe.rotateZ(-Math.PI / 6);
   const globeMaterial = Globe.globeMaterial();
   globeMaterial.color = new Color("#fff");
   globeMaterial.emissive = new Color("#fff");
@@ -163,13 +161,8 @@ function initGlobe() {
   globeMaterial.transparent = true;
   globeMaterial.opacity = 0.5; // Adjust the opacity value as needed for a faded look
 
-  // Ensure flat shading for shadows
-  globeMaterial.flatShading = true;
-  globeMaterial.shadowSide = true; // Enable shadow casting for the globe
-
-  // Enable shadow casting and receiving for the globe
-  Globe.castShadow = true;
-  Globe.receiveShadow = true;
+  // NOTE Cool stuff
+  // globeMaterial.wireframe = true;
 
   scene.add(Globe);
 }
@@ -177,6 +170,7 @@ function initGlobe() {
 function onMouseMove(event) {
   mouseX = event.clientX - windowHalfX;
   mouseY = event.clientY - windowHalfY;
+  // console.log("x: " + mouseX + " y: " + mouseY);
 }
 
 function onWindowResize() {
