@@ -89,14 +89,6 @@ light.shadow.radius = 10;
 scene.add(light);
 
 
-const globe = new Globe({
-  // ... other globe options
-mesh: {
-    castShadow: true, // Enable shadow casting on the globe mesh
-},
-});
-
-
   // Helpers
   // const axesHelper = new AxesHelper(800);
   // scene.add(axesHelper);
