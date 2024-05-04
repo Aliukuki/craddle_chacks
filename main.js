@@ -71,7 +71,7 @@ function init() {
   scene.add(camera);
 
   // Additional effects
-  scene.fog = new Fog("#0xd9d9d9", 400, 2000);
+  scene.fog = new Fog("#F2F2F2", 400, 2000);
 
   // Initialize controls
   controls = new OrbitControls(camera, renderer.domElement);
@@ -81,7 +81,7 @@ function init() {
   controls.enableZoom = false; // Disable zoom functionality
   controls.minDistance = 300;
   controls.maxDistance = 300;
-  controls.rotateSpeed = 0.4;
+  controls.rotateSpeed = 0.5;
   controls.zoomSpeed = 1;
   controls.autoRotate = true;
 
@@ -111,8 +111,8 @@ function initGlobe() {
           e.properties.ISO_A3
         )
       ) {
-        return "#E0E0E0";
-      } else return "#E0E0E0";
+        return "#C6C6C6";
+      } else return "#C6C6C6";
     });
   const arr = ["red", "red"];
   // NOTE Arc animations are followed after the globe enters the scene
@@ -140,7 +140,7 @@ function initGlobe() {
       .arcsTransitionDuration(4000)
       .arcDashInitialGap((e) => e.order * 1)
       .pointsData(airportHistory.airports)
-      .pointColor(() => "darkgreen")
+      .pointColor(() => "#E6FFE6")
       .pointsMerge(true)
       .pointAltitude(80)
       .pointRadius(0);
@@ -155,7 +155,7 @@ function initGlobe() {
   globeMaterial.shininess = 0.8;
   globeMaterial.envMap = null; // Disable the environment map
   globeMaterial.transparent = true;
-globeMaterial.opacity = 0.5; // Adjust the opacity value as needed for a faded look
+globeMaterial.opacity = 0.4; // Adjust the opacity value as needed for a faded look
 
   // NOTE Cool stuff
   // globeMaterial.wireframe = true;
