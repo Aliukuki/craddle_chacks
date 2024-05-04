@@ -73,20 +73,7 @@ function init() {
   // Additional effects
   scene.fog = new Fog("#0xd9d9d9", 400, 2000);
 
-  // Add after globe initialization
-const light = new DirectionalLight(0xffffff, 0.75);
-light.position.set(0, 500, 0);
-light.target.position.set(0, 0, 0);
-light.castShadow = true;
 
-light.shadow.mapSize.width = 1024;
-light.shadow.mapSize.height = 1024;
-light.shadow.camera.near = 0.5;
-light.shadow.camera.far = 500;
-light.shadow.bias = -0.002;
-light.shadow.radius = 10;
-
-scene.add(light);
 
 
   // Helpers
@@ -115,22 +102,6 @@ scene.add(light);
   //window.addEventListener("resize", onWindowResize, false);
   document.addEventListener("mousemove", onMouseMove);
 }
-
-// Create a line geometry
-const lineGeometry = new THREE.Geometry();
-lineGeometry.vertices.push(
-    new THREE.Vector3(0, 0, 0),  // Start point
-    new THREE.Vector3(1, 1, 1)   // End point
-);
-
-// Create a line material
-const lineMaterial = new THREE.LineBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0.1 });
-
-// Create the line mesh
-const line = new THREE.Line(lineGeometry, lineMaterial);
-
-// Add the line to the scene
-scene.add(line);
 
 // SECTION Globe
 function initGlobe() {
@@ -202,6 +173,38 @@ globeMaterial.opacity = 0.9; // Adjust the opacity value as needed for a faded l
 
   scene.add(Globe);
 }
+
+
+  // Add after globe initialization
+  const light = new DirectionalLight(0xffffff, 0.75);
+  light.position.set(0, 500, 0);
+  light.target.position.set(0, 0, 0);
+  light.castShadow = true;
+  
+  light.shadow.mapSize.width = 1024;
+  light.shadow.mapSize.height = 1024;
+  light.shadow.camera.near = 0.5;
+  light.shadow.camera.far = 500;
+  light.shadow.bias = -0.002;
+  light.shadow.radius = 10;
+  
+  scene.add(light);
+
+// Create a line geometry
+const lineGeometry = new THREE.Geometry();
+lineGeometry.vertices.push(
+    new THREE.Vector3(0, 0, 0),  // Start point
+    new THREE.Vector3(1, 1, 1)   // End point
+);
+
+// Create a line material
+const lineMaterial = new THREE.LineBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0.1 });
+
+// Create the line mesh
+const line = new THREE.Line(lineGeometry, lineMaterial);
+
+// Add the line to the scene
+scene.add(line);
 
 function onMouseMove(event) {
   mouseX = event.clientX - windowHalfX;
