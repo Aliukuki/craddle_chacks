@@ -73,32 +73,29 @@ function init() {
   // Additional effects
   scene.fog = new Fog("#0xd9d9d9", 400, 2000);
 
-  // Add spotlight positioned directly above the globe
-  const spotlight = new THREE.SpotLight(0x00ff00, 1); // Green color for the spotlight
-  spotlight.position.set(0, 500, 0);
-  spotlight.castShadow = true;
+  // Add after globe initialization
+const light = new DirectionalLight(0xffffff, 0.75);
+light.position.set(0, 500, 0);
+light.target.position.set(0, 0, 0);
+light.castShadow = true;
 
-  // Adjust spotlight parameters for the desired shadow shape and softness
-  spotlight.angle = Math.PI / 6; // Set the angle to control the spread of the light
-  spotlight.penumbra = 0.5; // Set the penumbra to control the softness of the shadow edges
+light.shadow.mapSize.width = 1024;
+light.shadow.mapSize.height = 1024;
+light.shadow.camera.near = 0.5;
+light.shadow.camera.far = 500;
+light.shadow.bias = -0.002;
+light.shadow.radius = 10;
 
-  // Set up shadow properties
-  spotlight.shadow.mapSize.width = 1024;
-  spotlight.shadow.mapSize.height = 1024;
-  spotlight.shadow.camera.near = 200;
-  spotlight.shadow.camera.far = 1000;
+scene.add(light);
 
-  // Add target for the spotlight to ensure the shadow falls precisely on the globe
-  const targetObject = new THREE.Object3D();
-  targetObject.position.set(0, 0, 0);
-  scene.add(targetObject);
-  spotlight.target = targetObject;
 
-  scene.add(spotlight);
-
-  // Additional settings for shadow rendering
-  renderer.shadowMap.enabled = true;
-  renderer.shadowMap.type = THREE.PCFSoftShadowMap; // Soft shadow mapping for smoother shadows
+  // Helpers
+  // const axesHelper = new AxesHelper(800);
+  // scene.add(axesHelper);
+  // var helper = new DirectionalLightHelper(dLight);
+  // scene.add(helper);
+  // var helperCamera = new CameraHelper(dLight.shadow.camera);
+  // scene.add(helperCamera);
 
   // Initialize controls
   controls = new OrbitControls(camera, renderer.domElement);
@@ -141,7 +138,6 @@ function initGlobe() {
         return "#46E96A";
       } else return "#46E96A";
     });
-
   const arr = ["red", "red"];
   // NOTE Arc animations are followed after the globe enters the scene
   setTimeout(() => {
@@ -183,7 +179,7 @@ function initGlobe() {
   globeMaterial.shininess = 0.4;
   globeMaterial.envMap = null; // Disable the environment map
   globeMaterial.transparent = true;
-  globeMaterial.opacity = 0.9; // Adjust the opacity value as needed for a faded look
+globeMaterial.opacity = 0.9; // Adjust the opacity value as needed for a faded look
 
   // NOTE Cool stuff
   // globeMaterial.wireframe = true;
