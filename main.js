@@ -48,7 +48,7 @@ function init() {
   camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();
 
-  var dLight = new DirectionalLight("#ffffff", 0.4);
+  var dLight = new DirectionalLight("#0xd9d9d9", 0.75);
   dLight.position.set(-800, 2000, 400);
   // camera.add(dLight);
 
@@ -56,11 +56,11 @@ function init() {
   dLight1.position.set(-200, 500, 200);
   // camera.add(dLight1);
 
-  var dLight2 = new PointLight("#faf3dd", 0.7);
+  var dLight2 = new PointLight("#faf3dd", 0.75);
   dLight2.position.set(-200, 100, 100);
   camera.add(dLight2);
 
-  var dLight3 = new DirectionalLight("#ffffff", 0.6);
+  var dLight3 = new DirectionalLight("#0xd9d9d9", 0.75);
   dLight3.position.set(-0, 2000, 0);
   camera.add(dLight3);
 
@@ -71,7 +71,7 @@ function init() {
   scene.add(camera);
 
   // Additional effects
-  scene.fog = new Fog("#fff", 400, 2000);
+  scene.fog = new Fog("#0xd9d9d9", 400, 2000);
 
   // Helpers
   // const axesHelper = new AxesHelper(800);
@@ -174,4 +174,24 @@ function onMouseMove(event) {
   mouseX = event.clientX - windowHalfX;
   mouseY = event.clientY - windowHalfY;
   // console.log("x: " + mouseX + " y: " + mouseY);
+}
+
+function onWindowResize() {
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+  windowHalfX = window.innerWidth / 1.5;
+  windowHalfY = window.innerHeight / 1.5;
+  renderer.setSize(window.innerWidth, window.innerHeight);
+}
+
+function animate() {
+  camera.position.x +=
+    Math.abs(mouseX) <= windowHalfX / 2
+      ? (mouseX / 2 - camera.position.x) * 0.005
+      : 0;
+  camera.position.y += (-mouseY / 2 - camera.position.y) * 0.005;
+  camera.lookAt(scene.position);
+  controls.update();
+  renderer.render(scene, camera);
+  requestAnimationFrame(animate);
 }
