@@ -117,6 +117,7 @@ scene.add(light);
 }
 
 // SECTION Globe
+// SECTION Globe
 function initGlobe() {
   // Initialize the Globe
   Globe = new ThreeGlobe({
@@ -138,38 +139,28 @@ function initGlobe() {
         return "#46E96A";
       } else return "#46E96A";
     });
-  const arr = ["red", "red"];
-  // NOTE Arc animations are followed after the globe enters the scene
-  setTimeout(() => {
-    Globe.arcsData(
-      travelHistory.flights.map((a) => ({
-        ...a,
-        color: arr[Math.round(Math.random() * 3) % 3],
-      }))
-    )
-      .arcColor((e, i) => {
-        let c = arr[Math.round(Math.random() * 3) % 2];
-        console.log({ c });
-        return c;
-      })
-      .arcAltitude((e) => {
-        return e.arcAlt;
-      })
-      .arcStroke((e) => {
-        return e.status ? 0.5 : 0.3;
-      })
-      .arcDashLength(0.8)
-      .arcDashGap(20)
-      .arcDashAnimateTime(5400)
-      .arcsTransitionDuration((e, i) => i * 500) // Adjust the duration for each arc
-      .arcDashInitialGap((e) => e.order * 1)
-      .pointsData(airportHistory.airports)
-      .pointColor(() => "darkgreen")
-    
-      .pointsMerge(true)
-      .pointAltitude(80)
-      .pointRadius(0);
-  }, 1000);
+
+  // Initialize arcs with a single arc data
+  const singleArcData = travelHistory.flights[0]; // Use the first flight data
+  Globe.arcsData([singleArcData])
+    .arcColor("red") // Set color of the arc
+    .arcAltitude((e) => {
+      return e.arcAlt;
+    })
+    .arcStroke((e) => {
+      return e.status ? 0.5 : 0.3;
+    })
+    .arcDashLength(0.8)
+    .arcDashGap(20)
+    .arcDashAnimateTime(5400)
+    .arcsTransitionDuration(4000)
+    .arcDashInitialGap(0) // Set initial gap to 0 to start the animation from the beginning
+    .pointsData(airportHistory.airports)
+    .pointColor(() => "darkgreen")
+    .pointsMerge(true)
+    .pointAltitude(80)
+    .pointRadius(0);
+}
 
   // Globe.rotateY(-Math.PI * (5 / 9));
   // Globe.rotateZ(-Math.PI / 6);
