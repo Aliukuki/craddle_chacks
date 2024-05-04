@@ -81,7 +81,7 @@ function init() {
   controls.enableZoom = false; // Disable zoom functionality
   controls.minDistance = 300;
   controls.maxDistance = 300;
-  controls.rotateSpeed = 0.7;
+  controls.rotateSpeed = 0.4;
   controls.zoomSpeed = 1;
   controls.autoRotate = true;
 
@@ -151,8 +151,8 @@ function initGlobe() {
   const globeMaterial = Globe.globeMaterial();
   globeMaterial.color = new Color("#fff");
   globeMaterial.emissive = new Color("#fff");
-  globeMaterial.emissiveIntensity = 0.8;
-  globeMaterial.shininess = 0.4;
+  globeMaterial.emissiveIntensity = 1;
+  globeMaterial.shininess = 1;
   globeMaterial.envMap = null; // Disable the environment map
   globeMaterial.transparent = true;
 globeMaterial.opacity = 0.9; // Adjust the opacity value as needed for a faded look
