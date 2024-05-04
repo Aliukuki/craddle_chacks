@@ -48,19 +48,19 @@ function init() {
   camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();
 
-  var dLight = new DirectionalLight("#0xd9d9d9", 0.75);
+  var dLight = new DirectionalLight("#faf3dd", 0.9);
   dLight.position.set(-800, 2000, 400);
   // camera.add(dLight);
 
-  var dLight1 = new DirectionalLight("#faf3dd", 0.75);
+  var dLight1 = new DirectionalLight("#faf3dd", 0.9);
   dLight1.position.set(-200, 500, 200);
   // camera.add(dLight1);
 
-  var dLight2 = new PointLight("#faf3dd", 0.75);
+  var dLight2 = new PointLight("#faf3dd", 0.9);
   dLight2.position.set(-200, 100, 100);
   camera.add(dLight2);
 
-  var dLight3 = new DirectionalLight("#0xd9d9d9", 0.75);
+  var dLight3 = new DirectionalLight("#faf3dd", 0.9);
   dLight3.position.set(-0, 2000, 0);
   camera.add(dLight3);
 
@@ -113,7 +113,7 @@ function initGlobe() {
     .hexPolygonMargin(0.5)
     .showAtmosphere(true)
     .atmosphereColor("#fff")
-    .atmosphereAltitude(0.03)
+    .atmosphereAltitude(0.05)
     .hexPolygonColor((e) => {
       if (
         ["LOS", "ABV", "THA", "RUS", "UZB", "IDN", "KAZ", "MYS"].includes(
