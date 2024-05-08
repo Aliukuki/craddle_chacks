@@ -90,11 +90,12 @@ function init() {
 }
 const colorArray = ["red", "green", "yellow"];
 const colorGradients = [
-  ["#4776E6", "#8E54E9"],
-  ["#FF8008", "#FFC837"],
-  ["#1D976C", "#93F9B9"],
-  ["#DD5E89", "#F7BB97"],
+  ["#ADD8E6", "#87CEEB"],
+  ["#E0FFFF", "#AFEEEE"],
+  ["#B0E0E6", "#ADD8E6"],
+  ["#B0C4DE", "#87CEEB"],
 ];
+
 
 // SECTION Globe
 function initGlobe() {
