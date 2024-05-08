@@ -90,10 +90,13 @@ function init() {
 }
 const colorArray = ["red", "green", "yellow"];
 const colorGradients = [
-  ["#00008B", "#1E90FF"],  // Dark Blue to Dodger Blue
-  ["#FFA500", "#FF8C00"],  // Orange to Dark Orange
-  ["#006400", "#008000"],  // Dark Green to Green
-  ["#800080", "#8A2BE2"],  // Purple to Blue Violet
+  ["#00008B", "#00FFFF"],  // Dark Blue to Cyan
+  ["#FFA500", "#FFFF00"],  // Orange to Yellow
+  ["#008000", "#00FF00"],  // Dark Green to Lime
+  ["#800080", "#FF00FF"],  // Purple to Magenta
+  ["#FF69B4", "#FF1493"],  // Hot Pink to Deep Pink
+  ["#8B0000", "#FF0000"],  // Dark Red to Red
+  ["#000080", "#0000FF"]   // Navy Blue to Blue
 ];
 
 
