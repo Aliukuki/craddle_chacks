@@ -92,11 +92,8 @@ const colorArray = ["red", "green", "yellow"];
 const colorGradients = [
   ["#00008B", "#1E90FF"],  // Dark Blue to Dodger Blue
   ["#FFA500", "#FF8C00"],  // Orange to Dark Orange
-  ["#FFD700", "#FFA500"],  // Gold to Orange
   ["#006400", "#008000"],  // Dark Green to Green
   ["#800080", "#8A2BE2"],  // Purple to Blue Violet
-  ["#FFC0CB", "#FF69B4"],  // Pink to Hot Pink
-  ["#8B0000", "#FF0000"]   // Dark Red to Red
 ];
 
 
