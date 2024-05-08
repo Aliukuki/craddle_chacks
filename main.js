@@ -123,7 +123,7 @@ function initGlobe() {
     .atmosphereAltitude(0.1)
     .hexPolygonColor((e) => {
       if (e.properties.ISO_A3 === "NGA") {
-        return "#90EE90"; // Change color to green for Nigeria
+        return "#05DD27"; // Change color to green for Nigeria
       } else {
         return "#E0E0E0"; // Returns a default color for other countries
       }
