@@ -90,11 +90,15 @@ function init() {
 }
 const colorArray = ["red", "green", "yellow"];
 const colorGradients = [
-  ["#ADD8E6", "#87CEEB"],
-  ["#E0FFFF", "#AFEEEE"],
-  ["#B0E0E6", "#ADD8E6"],
-  ["#B0C4DE", "#87CEEB"],
+  ["#00008B", "#1E90FF"],  // Dark Blue to Dodger Blue
+  ["#FFA500", "#FF8C00"],  // Orange to Dark Orange
+  ["#FFD700", "#FFA500"],  // Gold to Orange
+  ["#006400", "#008000"],  // Dark Green to Green
+  ["#800080", "#8A2BE2"],  // Purple to Blue Violet
+  ["#FFC0CB", "#FF69B4"],  // Pink to Hot Pink
+  ["#8B0000", "#FF0000"]   // Dark Red to Red
 ];
+
 
 // SECTION Globe
 function initGlobe() {
@@ -111,7 +115,7 @@ function initGlobe() {
     .atmosphereAltitude(0.1)
     .hexPolygonColor((e) => {
       if (e.properties.ISO_A3 === "NGA") {
-        return "#90EE90"; // Change color to green for Nigeria
+        return "#2E8B57"; // Change color to green for Nigeria
       } else {
         return "#E0E0E0"; // Returns a default color for other countries
       }
