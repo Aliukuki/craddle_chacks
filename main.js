@@ -127,7 +127,7 @@ function initGlobe() {
         return arcAlt;
       })
       .arcStroke((e) => {
-        return 0.2;
+        return 0.4;
       })
       .arcDashLength(1)
       .arcDashGap((e) => e.order + travelHistory.flights.length)
