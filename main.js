@@ -116,7 +116,7 @@ function initGlobe() {
     animateIn: true,
   })
     .hexPolygonsData(countries.features)
-    .hexPolygonResolution(3)
+    .hexPolygonResolution(5)
     .hexPolygonMargin(0.5)
     .showAtmosphere(true)
     .atmosphereColor("#a9a9a9")
