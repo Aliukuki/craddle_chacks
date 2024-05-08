@@ -96,7 +96,6 @@ const colorGradients = [
   ["#B0C4DE", "#87CEEB"],
 ];
 
-
 // SECTION Globe
 function initGlobe() {
   // Initialize the Globe
@@ -111,8 +110,8 @@ function initGlobe() {
     .atmosphereColor("#a9a9a9")
     .atmosphereAltitude(0.1)
     .hexPolygonColor((e) => {
-      if (e.properties.ISO_A3) {
-        return "#E0E0E0";
+      if (e.properties.ISO_A3 === "NGA") {
+        return colorArray[0];
       } else return "#E0E0E0";
     });
   // NOTE Arc animations are followed after the globe enters the scene
