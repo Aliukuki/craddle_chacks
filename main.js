@@ -111,8 +111,8 @@ function initGlobe() {
     .atmosphereAltitude(0.1)
     .hexPolygonColor((e) => {
       if (e.properties.ISO_A3 === "NGA") {
-        return "green"; // Change color to green for Nigeria
-      } else return "#E0E0E0"; // Returns a default color for other countries
+        return colorArray[0];
+      } else return "#E0E0E0";
     });
   // NOTE Arc animations are followed after the globe enters the scene
   setTimeout(() => {
