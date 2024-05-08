@@ -110,9 +110,7 @@ function initGlobe() {
     .atmosphereColor("#a9a9a9")
     .atmosphereAltitude(0.1)
     .hexPolygonColor((e) => {
-      if (
-        airportHistory.airports.map((a) => a.text).includes(e.properties.ISO_A3)
-      ) {
+      if (e.properties.ISO_A3) {
         return "#E0E0E0";
       } else return "#E0E0E0";
     });
