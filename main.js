@@ -40,7 +40,7 @@ function init() {
 
   // Initialize scene, light
   scene = new Scene();
-  scene.add(new AmbientLight("#F9FFFB", 0.6));
+  scene.add(new AmbientLight("#fff", 0.6));
   scene.background = new Color("#F9FFFB");
 
   // Initialize camera, light
@@ -108,7 +108,7 @@ function initGlobe() {
     .hexPolygonResolution(3)
     .hexPolygonMargin(0.5)
     .showAtmosphere(true)
-    .atmosphereColor("#F9FFFB")
+    .atmosphereColor("#a9a9a9")
     .atmosphereAltitude(0.1)
     .hexPolygonColor((e) => {
       if (e.properties.ISO_A3 === "NGA") {
@@ -166,8 +166,8 @@ function initGlobe() {
   // Globe.rotateY(-Math.PI * (5 / 9));
   // Globe.rotateZ(-Math.PI / 6);
   const globeMaterial = Globe.globeMaterial();
-  globeMaterial.color = new Color("#fff");
-  globeMaterial.emissive = new Color("#fff");
+  globeMaterial.color = new Color("#F9FFFB");
+  globeMaterial.emissive = new Color("#F9FFFB");
   globeMaterial.emissiveIntensity = 0.8;
   globeMaterial.shininess = 0.8;
   globeMaterial.envMap = null; // Disable the environment map
