@@ -108,7 +108,7 @@ function initGlobe() {
     .hexPolygonResolution(3)
     .hexPolygonMargin(0.5)
     .showAtmosphere(true)
-    .atmosphereColor("#a9a9a9")
+    .atmosphereColor("#F9FFFB")
     .atmosphereAltitude(0.1)
     .hexPolygonColor((e) => {
       if (e.properties.ISO_A3 === "NGA") {
@@ -143,7 +143,7 @@ function initGlobe() {
         if (index > -1) {
           return colorGradients[index % colorGradients.length][1];
         } else {
-          return "#E0E0E0";
+          return "#F9FFFB";
         }
       })
       .pointsMerge(true)
@@ -158,7 +158,7 @@ function initGlobe() {
         if (index > -1) {
           return colorGradients[index % colorGradients.length];
         } else {
-          return "#E0E0E0";
+          return "#F9FFFB";
         }
       });
   }, 1000);
