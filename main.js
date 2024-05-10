@@ -112,7 +112,7 @@ function initGlobe() {
     .atmosphereAltitude(0.1)
     .hexPolygonColor((e) => {
       if (e.properties.ISO_A3 === "NGA") {
-        return "#00C374"; // Change color to black for Nigeria
+        return "#00D17A"; // Change color to black for Nigeria
       } else {
         return "#E0E0E0"; // Returns a default color for other countries
       }
@@ -172,7 +172,7 @@ function initGlobe() {
   globeMaterial.shininess = 0.8;
   globeMaterial.envMap = null; // Disable the environment map
   globeMaterial.transparent = true;
-  globeMaterial.opacity = 0.2; // Adjust the opacity value as needed for a faded look
+  globeMaterial.opacity = 0; // Adjust the opacity value as needed for a faded look
 
   // NOTE Cool stuff
   // globeMaterial.wireframe = true;
