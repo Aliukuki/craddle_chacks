@@ -40,7 +40,7 @@ function init() {
 
   // Initialize scene, light
   scene = new Scene();
-  scene.add(new AmbientLight("#fff", 0.6));
+  scene.add(new AmbientLight("#F9FFFB", 0.6));
   scene.background = new Color("#F9FFFB");
 
   // Initialize camera, light
@@ -108,7 +108,7 @@ function initGlobe() {
     .hexPolygonResolution(3)
     .hexPolygonMargin(0.5)
     .showAtmosphere(true)
-    .atmosphereColor("#a9a9a9")
+    .atmosphereColor("#F9FFFB")
     .atmosphereAltitude(0.1)
     .hexPolygonColor((e) => {
       if (e.properties.ISO_A3 === "NGA") {
