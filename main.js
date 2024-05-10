@@ -40,7 +40,7 @@ function init() {
 
   // Initialize scene, light
   scene = new Scene();
-  scene.add(new AmbientLight("#F9FFFB", 0.6));
+  scene.add(new AmbientLight("#fff", 0.6));
   scene.background = new Color("#F9FFFB");
 
   // Initialize camera, light
@@ -48,19 +48,19 @@ function init() {
   camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();
 
-  var dLight = new DirectionalLight("#F9FFFB", 0.2);
+  var dLight = new DirectionalLight("#fff", 0.2);
   dLight.position.set(-800, 2000, 400);
   // camera.add(dLight);
 
-  var dLight1 = new DirectionalLight("#F9FFFB", 0.2);
+  var dLight1 = new DirectionalLight("#fff", 0.2);
   dLight1.position.set(-200, 500, 200);
   // camera.add(dLight1);
 
-  var dLight2 = new PointLight("#F9FFFB", 0.2);
+  var dLight2 = new PointLight("#fff", 0.2);
   dLight2.position.set(-200, 100, 100);
   camera.add(dLight2);
 
-  var dLight3 = new DirectionalLight("#F9FFFB", 0.2);
+  var dLight3 = new DirectionalLight("#fff", 0.2);
   dLight3.position.set(-0, 2000, 0);
   camera.add(dLight3);
 
@@ -108,11 +108,11 @@ function initGlobe() {
     .hexPolygonResolution(3)
     .hexPolygonMargin(0.5)
     .showAtmosphere(true)
-    .atmosphereColor("#F9FFFB")
+    .atmosphereColor("#a9a9a9")
     .atmosphereAltitude(0.1)
     .hexPolygonColor((e) => {
       if (e.properties.ISO_A3 === "NGA") {
-        return "#00FF00"; // Change color to green for Nigeria
+        return "#00FF00"; // Change color to black for Nigeria
       } else {
         return "#E0E0E0"; // Returns a default color for other countries
       }
@@ -143,7 +143,7 @@ function initGlobe() {
         if (index > -1) {
           return colorGradients[index % colorGradients.length][1];
         } else {
-          return "#F9FFFB";
+          return "#E0E0E0";
         }
       })
       .pointsMerge(true)
@@ -158,7 +158,7 @@ function initGlobe() {
         if (index > -1) {
           return colorGradients[index % colorGradients.length];
         } else {
-          return "#F9FFFB";
+          return "#E0E0E0";
         }
       });
   }, 1000);
