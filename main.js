@@ -172,7 +172,7 @@ function initGlobe() {
   globeMaterial.shininess = 0.8;
   globeMaterial.envMap = null; // Disable the environment map
   globeMaterial.transparent = true;
-  globeMaterial.opacity = 0; // Adjust the opacity value as needed for a faded look
+  globeMaterial.opacity = 0.2; // Adjust the opacity value as needed for a faded look
 
   // NOTE Cool stuff
   // globeMaterial.wireframe = true;
