@@ -90,8 +90,8 @@ function init() {
 }
 const colorArray = ["green"];
 const colorGradients = [
-["#008000", "#00FF00"],  // Dark Blue to Cyan
-["#008000", "#00FF00"],  // Orange to Yellow
+["#008000", "#00FF00"],  // Dark Green to Lime
+["#008000", "#00FF00"],  // Dark Green to Lime
 ["#008000", "#00FF00"],  // Dark Green to Lime
 
 ];
@@ -112,7 +112,7 @@ function initGlobe() {
     .atmosphereAltitude(0.1)
     .hexPolygonColor((e) => {
       if (e.properties.ISO_A3 === "NGA") {
-        return "#000"; // Change color to black for Nigeria
+        return "#00FF00"; // Change color to black for Nigeria
       } else {
         return "#E0E0E0"; // Returns a default color for other countries
       }
