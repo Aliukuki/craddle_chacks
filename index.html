@@ -2,10 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title> Cradle Globe </title>
+    <title>Cradle Globe</title>
     <style>
       body {
         margin: 0;
+        overflow: hidden;
+        background-color: #050505; /* Matte black background */
+      }
+      canvas {
+        display: block;
       }
     </style>
   </head>
@@ -13,12 +18,13 @@
     <script type="importmap">
       {
         "imports": {
-          "three": "https://esm.sh/three@0.128.0",
-          "three-globe": "https://esm.sh/three-globe@^2.18.8",
-          "orbital": "https://cdn.jsdelivr.net/npm/three@0.128.0/examples/jsm/controls/OrbitControls.js"
+          "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/",
+          "three-globe": "https://esm.sh/three-globe@2.30.0"
         }
       }
     </script>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
+
